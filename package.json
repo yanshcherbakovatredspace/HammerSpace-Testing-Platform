@@ -1,0 +1,24 @@
+{
+  "name": "hammerspace-testing-platform",
+  "version": "1.0.0",
+  "description": "Platform for testing applications with HammerSpace",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:yanshcherbakovatredspace/HammerSpace-Testing-Platform.git"
+  },
+  "author": "Yan Shcherbakov",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^0.28.8",
+    "html-webpack-plugin": "^2.30.1",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "hammerspace": "git+ssh://git@github.com:theredspace/hammerspace.git#master"
+  }
+}
