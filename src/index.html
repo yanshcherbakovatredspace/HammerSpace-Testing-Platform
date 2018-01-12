@@ -9,8 +9,8 @@
     <% } %>
   </head>
   <body>
-  	<div class="buttons">
-	  <div class="connection">Disconnected</div>
+    <div class="buttons">
+      <div class="connection">Disconnected</div>
         <button class="help">help</button>
         <button class="pause">Pause</button>
         <button class="mute">Mute</button>
@@ -19,16 +19,16 @@
         <button class="music">Mute Music</button>
         <button class="captions">Hide Captions</button>
       </div>
-	  <div class="appWrapper">
-	    <iframe id="appContainer" src="game/index.html" frameborder="0" scrolling="no"></iframe>
-	  </div>
+    <div class="appWrapper">
+      <iframe id="appContainer" src="game/index.html" frameborder="0" scrolling="no"></iframe>
+    </div>
   	
-  	<% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+    <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
       <script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
     <% } %>
-	  <script>
-	  document.addEventListener("DOMContentLoaded", function(event) { 
-	    var client = new Hammer.client();
+    <script>
+    document.addEventListener("DOMContentLoaded", function(event) { 
+      var client = new Hammer.client();
       var rebound = new Hammer.rebound();
 
       rebound.setID('appContainer');
@@ -39,7 +39,7 @@
       client.on('connected', function(data) {
         document.querySelector('.connection').innerText = 'Connected';
       });
-	  });
-	</script>
+    });
+    </script>
   </body>
 </html>
